@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>给沙比长亭叙的表白信 💌</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Microsoft YaHei', 'Segoe UI', 'STKaiti', sans-serif;
+            background: linear-gradient(45deg, #ffafbd, #ffc3a0, #a1c4fd, #c2e9fb);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            color: #333;
+        }
+        
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        .envelope {
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(255, 107, 107, 0.3);
+            overflow: hidden;
+            padding: 40px;
+            border: 8px solid transparent;
+            border-image: linear-gradient(45deg, #ff6b6b, #ffd166, #06d6a0, #118ab2) 1;
+        }
+        
+        .heart {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 60px;
+            height: 60px;
+            background: #ff6b6b;
+            transform: rotate(45deg);
+            animation: heartbeat 1.5s ease-in-out infinite;
+        }
+        
+        .heart:before,
+        .heart:after {
+            content: '';
+            width: 60px;
+            height: 60px;
+            background: #ff6b6b;
+            border-radius: 50%;
+            position: absolute;
+        }
+        
+        .heart:before {
+            top: -30px;
+            left: 0;
+        }
+        
+        .heart:after {
+            top: 0;
+            left: -30px;
+        }
+        
+        @keyframes heartbeat {
+            0%, 100% { transform: rotate(45deg) scale(1); }
+            50% { transform: rotate(45deg) scale(1.1); }
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            position: relative;
+        }
+        
+        .title {
+            font-size: 3.5em;
+            color: #ff6b6b;
+            margin-bottom: 10px;
+            text-shadow: 3px 3px 0 rgba(255, 107, 107, 0.2);
+            font-family: 'STKaiti', serif;
+        }
+        
+        .subtitle {
+            font-size: 1.5em;
+            color: #666;
+            font-weight: 300;
+        }
+        
+        .to-name {
+            color: #ff6b6b;
+            font-weight: bold;
+            font-size: 1.8em;
+            text-decoration: underline;
+            text-decoration-color: #ffd166;
+            text-underline-offset: 8px;
+        }
+        
+        .content {
+            line-height: 1.8;
+            font-size: 1.2em;
+            margin-bottom: 40px;
+        }
+        
+        .message {
+            background: linear-gradient(135deg, #fff5f5, #fff);
+            padding: 30px;
+            border-radius: 15px;
+            border-left: 6px solid #ff6b6b;
+            margin: 30px 0;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .message p {
+            margin-bottom: 20px;
+            text-indent: 2em;
+        }
+        
+        .highlight {
+            color: #ff6b6b;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+        
+        .qualities {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        
+        .quality-card {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+            transition: transform 0.3s ease;
+            border: 2px solid transparent;
+            background-clip: padding-box, border-box;
+            background-origin: border-box;
+            background-image: linear-gradient(white, white), 
+                              linear-gradient(45deg, #ff6b6b, #ffd166);
+        }
+        
+        .quality-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .quality-icon {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            display: block;
+        }
+        
+        .quality-title {
+            color: #ff6b6b;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .confession {
+            text-align: center;
+            margin: 40px 0;
+            padding: 30px;
+            background: linear-gradient(135deg, #ff6b6b, #ff8e8e);
+            color: white;
+            border-radius: 15px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .confession:before {
+            content: '❤️';
+            position: absolute;
+            font-size: 10em;
+            opacity: 0.1;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        
+        .confession-text {
+            font-size: 2em;
+            font-weight: bold;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .signature {
+            text-align: right;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 2px dashed #ffd166;
+        }
+        
+        .signature-name {
+            font-size: 2em;
+            color: #ff6b6b;
+            font-family: 'STKaiti', serif;
+            margin-bottom: 10px;
+        }
+        
+        .date {
+            color: #666;
+            font-style: italic;
+        }
+        
+        .flowers {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            font-size: 2em;
+            opacity: 0.7;
+        }
+        
+        .music-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #ff6b6b;
+            color: white;
+            border: none;
+            padding: 15px 25px;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 1.1em;
+            box-shadow: 0 5px 15px rgba(255, 107, 107, 0.4);
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+        
+        .music-btn:hover {
+            background: #ff5252;
+            transform: scale(1.05);
+        }
+        
+        @media (max-width: 768px) {
+            .envelope { padding: 20px; }
+            .title { font-size: 2.5em; }
+            .confession-text { font-size: 1.5em; }
+        }
+        
+        /* 飘落的心形 */
+        .falling-hearts {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+        
+        .falling-heart {
+            position: absolute;
+            color: #ff6b6b;
+            font-size: 24px;
+            opacity: 0.7;
+            animation: falling linear infinite;
+        }
+        
+        @keyframes falling {
+            to { transform: translateY(100vh) rotate(360deg); }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="falling-hearts" id="hearts-container"></div>
+    
+    <div class="envelope">
+        <div class="heart"></div>
+        
+        <div class="header">
+            <h1 class="title">💌 表白信</h1>
+            <div class="subtitle">致我最亲爱的 <span class="to-name">长亭叙</span></div>
+        </div>
+        
+        <div class="content">
+            <p>亲爱的 <span class="to-name">长亭叙</span>，</p>
+            
+            <div class="message">
+                <p>当我写下这些文字的时候，心里充满了温暖和感激。遇见你，是我生命中最美好的意外。</p>
+                
+                <p>还记得我们第一次见面时的情景吗？你的笑容像阳光一样照亮了我的世界。从那一刻起，我就知道，你是一个特别的人。</p>
+                
+                <p>和你在一起的每一刻都让我感到幸福。无论是分享快乐时的笑声，还是面对困难时的互相支持，都让我更加确定：<span class="highlight">你就是我想要一直陪伴的人</span>。</p>
+            </div>
+            
+            <h3 style="text-align: center; color: #ff6b6b; margin: 30px 0;">你让我心动的理由 🌟</h3>
+            
+            <div class="qualities">
+                <div class="quality-card">
+                    <span class="quality-icon">😊</span>
+                    <div class="quality-title">温暖的笑容</div>
+                    <div>你的笑容总能驱散我所有的烦恼</div>
+                </div>
+                
+                <div class="quality-card">
+                    <span class="quality-icon">💖</span>
+                    <div class="quality-title">善良的心</div>
+                    <div>你总是为他人着想，充满爱心</div>
+                </div>
+                
+                <div class="quality-card">
+                    <span class="quality-icon">🌟</span>
+                    <div class="quality-title">独特的个性</div>
+                    <div>你有着让我着迷的独特魅力</div>
+                </div>
+                
+                <div class="quality-card">
+                    <span class="quality-icon">🎯</span>
+                    <div class="quality-title">坚定的内心</div>
+                    <div>你对待生活的态度让我敬佩</div>
+                </div>
+            </div>
+            
+            <div class="confession">
+                <div class="confession-text">
+                    长亭叙，我喜欢你！<br>
+                    愿意给我一个机会，<br>
+                    让我陪你走过每一个明天吗？ 💕
+                </div>
+            </div>
+            
+            <p style="text-align: center; font-size: 1.3em; margin: 30px 0;">
+                无论你的答案是什么，<br>
+                我都会珍惜我们之间的每一份回忆。<br>
+                <span style="color: #ff6b6b;">因为你值得所有的美好</span>。
+            </p>
+        </div>
+        
+        <div class="signature">
+            <div class="signature-name">永远喜欢你的人</div>
+            <div class="date">2026年3月16日 星期二</div>
+            <div class="date" style="margin-top: 10px;">一个充满爱意的午后</div>
+        </div>
+        
+        <div class="flowers">
+            🌹 🌸 💐 🌷 🥀
+        </div>
+    </div>
+    
+    <button class="music-btn" onclick="toggleMusic()">
+        <i class="fas fa-music"></i> 播放背景音乐
+    </button>
+    
+    <script>
+        // 创建飘落的心形
+        function createHearts() {
+            const container = document.getElementById('hearts-container');
+            const hearts = ['❤️', '💖', '💗', '💓', '💞', '💕'];
+            
+            for (let i = 0; i < 30; i++) {
+                const heart = document.createElement('div');
+                heart.className = 'falling-heart';
+                heart.textContent = hearts[Math.floor(Math.random() * hearts.length)];
+                heart.style.left = Math.random() * 100 + 'vw';
+                heart.style.animationDuration = (Math.random() * 5 + 5) + 's';
+                heart.style.animationDelay = Math.random() * 5 + 's';
+                heart.style.opacity = Math.random() * 0.5 + 0.3;
+                heart.style.fontSize = (Math.random() * 20 + 20) + 'px';
+                container.appendChild(heart);
+            }
+        }
+        
+        // 背景音乐
+        let audio = null;
+        let isPlaying = false;
+        
+        function toggleMusic() {
+            if (!audio) {
+                audio = new Audio('https://assets.mixkit.co/music/preview/mixkit-loving-you-117.mp3');
+                audio.loop = true;
+                audio.volume = 0.3;
+            }
+            
+            if (isPlaying) {
+                audio.pause();
+                document.querySelector('.music-btn').innerHTML = '<i class="fas fa-music"></i> 播放背景音乐';
+            } else {
+                audio.play().catch(e => {
+                    alert('音乐播放失败，请检查网络或点击确定继续浏览');
+                });
+                document.querySelector('.music-btn').innerHTML = '<i class="fas fa-pause"></i> 暂停音乐';
+            }
+            isPlaying = !isPlaying;
+        }
+        
+        // 点击信封效果
+        document.querySelector('.envelope').addEventListener('click', function() {
+            this.style.transform = 'scale(0.99)';
+            setTimeout(() => {
+                this.style.transform = 'scale(1)';
+            }, 200);
+        });
+        
+        // 打字机效果
+        function typeWriter() {
+            const title = document.querySelector('.title');
+            const originalText = title.textContent;
+            title.textContent = '';
+            let i = 0;
+            
+            function type() {
+                if (i < originalText.length) {
+                    title.textContent += originalText.charAt(i);
+                    i++;
+                    setTimeout(type, 100);
+                }
+            }
+            type();
+        }
+        
+        // 页面加载完成
+        document.addEventListener('DOMContentLoaded', function() {
+            createHearts();
+            setTimeout(typeWriter, 1000);
+            
+            // 添加一些交互提示
+            console.log('💖 表白页面加载完成！');
+            console.log('给长条叙的表白信已准备好！');
+        });
+        
+        // 添加键盘快捷键
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'm' || e.key === 'M') {
+                toggleMusic();
+            }
+            if (e.key === 'Escape' && audio) {
+                audio.pause();
+                isPlaying = false;
+                document.querySelector('.music-btn').innerHTML = '<i class="fas fa-music"></i> 播放背景音乐';
+            }
+        });
+    </script>
+</body>
+</html>
